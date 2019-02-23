@@ -373,9 +373,9 @@ transform:scale(1.1);}
 
 /*== Section Three ==*/
 
-.section-four{ padding-top:86px; padding-bottom:102px; background-color:#f7f7f8}
+.section-four{ padding-top:0px; padding-bottom:0px; background-color:#f7f7f8}
 
-.section-four header[role="title-page"]{ padding-bottom:63px}
+.section-four header[role="title-page"]{ padding-bottom:0px}
 
 /* Team */
 
@@ -606,4 +606,3 @@ i{
     66% { opacity: 1; }
     100% { opacity: 0; }
 }
-
