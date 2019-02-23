@@ -199,7 +199,7 @@ header[role="header"].header-top hgroup nav ul>li>a:focus{color:#FFF;}
 
 header[role="header"].header-top hgroup.navbar-fixed-top,header[role="header"].header-top hgroup,header[role="header"].header-top hgroup h1,header[role="header"].header-top hgroup h1 img,header[role="header"].header-top hgroup nav ul,header[role="header"].header-top hgroup nav ul > li,.four-box-pan figure,.four-box-pan figure i,.four-box-pan section,.section-two section,.section-two section figure,.section-two section figure>img,.pricing>section input[type="button"],.pricing>section,.team-pan figure,.team-pan figure img,.subscribe-form button,.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea,.contact-form input[type="submit"]{transition-delay:0.8s;
 
-transition-duration: 0.8s;transition-property: all;transition-timing-function: ease;}
+transition-duration: 0.8;transition-property: all;transition-timing-function: ease;}
 
 
 
