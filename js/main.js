@@ -1,8 +1,9 @@
+// ページを読み込む時にゆっくり表示させる
 $('head').append(
 '<style>body{display:none;}'
 );
 $(window).on("load", function() {
-$('body').delay(20).fadeIn(1500);
+$('body').fadeIn(1500);
 });
 
 
@@ -234,7 +235,7 @@ function searchPlace(){
       let nowLongitude = position.coords.longitude;
       // 現在地周辺の検索条件に合致する居酒屋のURLを格納
       let url = uriBase + "?key=" + subscriptionKey + 
-      "&private_room=1" + "&cocktail=1" + "&range=5" + 
+      "&private_room=1" + "&cocktail=1" + "&range=5" + "&count=20" + 
       "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp";
 
       // 検索実行後、ヒットした居酒屋情報を配列に格納
@@ -245,7 +246,23 @@ function searchPlace(){
       })
       .done(function(data) {
         console.log(data);
-        let resultsValue = data.results.results_returned;
+        //section-fourのpadding調整
+        let sectionFour = document.getElementById("section-four");
+        sectionFour.style.padding = '86px 102px 0';
+        let sectionFourHeader = document.getElementById("title");
+        sectionFourHeader.style.padding = '0 0 63px 0';
+
+        //h4,h2タグの作成
+        let h4 = document.createElement('h4');
+        h4.textContent = "お近くのお店";
+        let h2 = document.createElement('h2');
+        h2.textContent = "カクテルの種類が豊富！個室完備！";
+        // h4,h2タグをheaderタグの子要素に追加
+        let title = document.getElementById('title');
+        title.appendChild(h4);
+        title.appendChild(h2);
+
+        let resultsValue = data.results.results_available;
         // 検索結果を表示
         for(i = 0; i < resultsValue; i++){
           // 居酒屋の「名前」「url」「画像」を格納
