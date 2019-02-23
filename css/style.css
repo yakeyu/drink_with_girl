@@ -199,7 +199,7 @@ header[role="header"].header-top hgroup nav ul>li>a:focus{color:#FFF;}
 
 header[role="header"].header-top hgroup.navbar-fixed-top,header[role="header"].header-top hgroup,header[role="header"].header-top hgroup h1,header[role="header"].header-top hgroup h1 img,header[role="header"].header-top hgroup nav ul,header[role="header"].header-top hgroup nav ul > li,.four-box-pan figure,.four-box-pan figure i,.four-box-pan section,.section-two section,.section-two section figure,.section-two section figure>img,.pricing>section input[type="button"],.pricing>section,.team-pan figure,.team-pan figure img,.subscribe-form button,.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea,.contact-form input[type="submit"]{transition-delay:0.8s;
 
-transition-duration: 0.8;transition-property: all;transition-timing-function: ease;}
+transition-duration: 0.8s;transition-property: all;transition-timing-function: ease;}
 
 
 
@@ -540,5 +540,70 @@ i{
 @keyframes sp-anime {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(359deg); }
+}
+
+/*トップイメージのスライダー*/
+#header {
+  background-position: center;
+  position: fixed;
+  height: 90%;
+  bottom: 10%;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+.fadeSlider {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.1);
+}
+.fadeSlider span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fadeSlider_01 {
+  background-image: url(../images/header1.jpg);
+  animation: fadeSlideImg01 15s ease-out infinite;
+  animation-delay: 3s;
+}
+.fadeSlider_02 {
+  opacity: 0;
+  background-image: url(../images/header2.jpg);
+  animation: fadeSlideImg02 15s ease-out infinite;
+  animation-delay: 3s;
+}
+.fadeSlider_03 {
+  opacity: 0;
+  background-image: url(../images/header3.jpg);
+  animation: fadeSlideImg03 15s ease-out infinite;
+  animation-delay: 3s;
+}
+@keyframes fadeSlideImg01 {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeSlideImg02 {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fadeSlideImg03 {
+    0% { opacity: 0; }
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
 }
 

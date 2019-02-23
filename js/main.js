@@ -1,3 +1,12 @@
+$('head').append(
+'<style>body{display:none;}'
+);
+$(window).on("load", function() {
+$('body').delay(20).fadeIn(1500);
+});
+
+
+
 // When the DOM is ready, run this function
 
 $(document).ready(function() {
