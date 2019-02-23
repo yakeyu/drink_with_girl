@@ -214,6 +214,7 @@ $(document).ready(function() {
 
         });
 });
+
 // ここからアレンジ
 // 居酒屋検索結果の取得
 function searchPlace(){
