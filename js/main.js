@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	$(window).on('scroll', function(){
 
-		if( $(window).scrollTop()>600 ){
+		if( $(window).scrollTop()>100 ){
 
 			$('.header-top .header-fixed-wrapper').addClass('navbar-fixed-top animated fadeInDown');
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
   var width = $(window).width();
 
-  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-one').offset().top - $('.navbar').height() * 2;
+  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-four').offset().top - $('.navbar').height() * 2;
 
   $('.navbar').affix({
 
@@ -203,14 +203,20 @@ $(document).ready(function() {
           fixedContentPos: false
 
         });
-
-  
-
 });
-
 // ここからアレンジ
 // 居酒屋検索結果の取得
 function searchPlace(){
+  // ボタンをクリックしたら検索結果へスクロール
+  let position = $(".section-four").offset().top;
+  $("html,body").animate({
+    scrollTop: position
+  });
+  // ローディング画面の表示
+  $("#overlay").fadeIn(500);
+  let load = document.getElementById('overlay');
+  load.style.display = 'block';
+  // APIキー、urlを格納
   let subscriptionKey = "d50399ac93d9a97a";
   let uriBase = 
   "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
@@ -271,16 +277,11 @@ function searchPlace(){
           section.appendChild(figure);
           section.appendChild(header);
 
-          // let result = document.createElement('li');
-          // let shopName = document.createElement('a');
-          // shopName.textContent = resultsName;
-          // shopName.href = resultsUrl;
-          // result.appendChild(shopName);
-
           let list = document.getElementById('searchStore');
           list.appendChild(section);
         }
-
+        // 検索結果が表示されたらローディング画面をフェードアウト
+        $("#overlay").fadeOut(500);
       })
       .fail(function(){
         console.log(2);
@@ -288,5 +289,8 @@ function searchPlace(){
 
     },
   );
-
 };
+
+
+
+
