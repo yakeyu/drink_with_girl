@@ -28,14 +28,14 @@ $(document).ready(function() {
 
 	$(window).on('scroll', function(){
 
-		if( $(window).scrollTop()>100 ){
+		if( $(window).scrollTop()>90 ){
 
 			$('.header-top .header-fixed-wrapper').addClass('navbar-fixed-top animated fadeInDown');
 
 			
 
 		} else {
-
+      $('.navbar-fixed-top animated fadeInDown').fadeOut(500);
 			$('.header-top .header-fixed-wrapper').removeClass('navbar-fixed-top animated fadeInDown');
 
 		}
@@ -207,11 +207,6 @@ $(document).ready(function() {
 // ここからアレンジ
 // 居酒屋検索結果の取得
 function searchPlace(){
-  // ボタンをクリックしたら検索結果へスクロール
-  let position = $(".section-four").offset().top;
-  $("html,body").animate({
-    scrollTop: position
-  });
   // ローディング画面の表示
   $("#overlay").fadeIn(500);
   let load = document.getElementById('overlay');
@@ -240,7 +235,8 @@ function searchPlace(){
         dataType:'jsonp'
       })
       .done(function(data) {
-        let resultsValue = data.results.results_available;
+        console.log(data);
+        let resultsValue = data.results.results_returned;
         // 検索結果を表示
         for(i = 0; i < resultsValue; i++){
           // 居酒屋の「名前」「url」「画像」を格納
@@ -280,7 +276,13 @@ function searchPlace(){
           let list = document.getElementById('searchStore');
           list.appendChild(section);
         }
-        // 検索結果が表示されたらローディング画面をフェードアウト
+        // 検索結果が表示されたら検索結果へスクロール
+        let position = $(".section-four").offset().top;
+        $("html,body").animate({
+          scrollTop: position
+        });
+
+        // ローディング画面をフェードアウト
         $("#overlay").fadeOut(500);
       })
       .fail(function(){
