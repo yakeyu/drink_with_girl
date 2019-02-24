@@ -233,6 +233,7 @@ function searchPlace(){
       let nowLatitude = position.coords.latitude;
       // 現在地の経度を取得
       let nowLongitude = position.coords.longitude;
+
       // 現在地周辺の検索条件に合致する居酒屋のURLを格納
       let url = uriBase + "?key=" + subscriptionKey + 
       "&private_room=1" + "&cocktail=1" + "&range=5" + "&count=20" + 
@@ -262,6 +263,7 @@ function searchPlace(){
         title.appendChild(h4);
         title.appendChild(h2);
 
+        // 検索結果の数を格納
         let resultsValue = data.results.results_available;
         // 検索結果を表示
         for(i = 0; i < resultsValue; i++){
@@ -302,6 +304,7 @@ function searchPlace(){
           let list = document.getElementById('searchStore');
           list.appendChild(section);
         }
+
         // 検索結果が表示されたら検索結果へスクロール
         let position = $(".section-four").offset().top;
         $("html,body").animate({
@@ -314,10 +317,8 @@ function searchPlace(){
       .fail(function(){
         console.log(2);
       });
-
-    },
-  );
-};
+    });
+  };
 
 
 
