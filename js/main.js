@@ -7,12 +7,11 @@ $('body').fadeIn(1500);
 });
 
 
-
 // When the DOM is ready, run this function
 
 $(document).ready(function() {
 
-  
+
 
   //#HEADER
 
@@ -234,11 +233,19 @@ function searchPlace(){
       let nowLatitude = position.coords.latitude;
       // 現在地の経度を取得
       let nowLongitude = position.coords.longitude;
-
       // 現在地周辺の検索条件に合致する居酒屋のURLを格納
       let url = uriBase + "?key=" + subscriptionKey + 
       "&private_room=1" + "&cocktail=1" + "&range=5" + "&count=20" + 
       "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp";
+
+      // GoogleMapの実装・現在地の表示
+      let MyLatLng = new google.maps.LatLng(nowLatitude, nowLongitude);
+      let Options = {
+        zoom: 15,      //地図の縮尺値
+        center: MyLatLng,    //地図の中心座標
+        mapTypeId: 'roadmap'   //地図の種類
+      };
+      let map = new google.maps.Map(document.getElementById('map'), Options);
 
       // 検索実行後、ヒットした居酒屋情報を配列に格納
       $.ajax({
@@ -248,6 +255,9 @@ function searchPlace(){
       })
       .done(function(data) {
         console.log(data);
+        // googlemapを表示
+        let map = document.getElementById("map");
+        map.style.display = 'block';
         //section-fourのpadding調整
         let sectionFour = document.getElementById("section-four");
         sectionFour.style.padding = '86px 102px 0';
@@ -320,7 +330,6 @@ function searchPlace(){
       });
     });
   };
-
 
 
 

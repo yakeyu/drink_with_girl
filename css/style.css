@@ -606,3 +606,20 @@ i{
     66% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/*googleMapの記述*/
+#map {
+	display: none;
+	height: 450px;
+	width: 600px;
+	margin: 0 auto 63px auto;
+}
+
+
+
+
+
+
+
+
+
