@@ -222,7 +222,7 @@ function searchPlace(){
   let load = document.getElementById('overlay');
   load.style.display = 'block';
   // APIキー、urlを格納
-  let subscriptionKey = "d50399ac93d9a97a";
+  let subscriptionKey = "";
   let uriBase = 
   "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
 
