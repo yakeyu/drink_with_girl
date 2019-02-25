@@ -239,13 +239,13 @@ function searchPlace(){
       "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp";
 
       // GoogleMapの実装・現在地の表示
-      let MyLatLng = new google.maps.LatLng(nowLatitude, nowLongitude);
-      let Options = {
-        zoom: 15,      //地図の縮尺値
-        center: MyLatLng,    //地図の中心座標
-        mapTypeId: 'roadmap'   //地図の種類
-      };
-      let map = new google.maps.Map(document.getElementById('map'), Options);
+      // let MyLatLng = new google.maps.LatLng(nowLatitude, nowLongitude);
+      // let Options = {
+      //   zoom: 15,      //地図の縮尺値
+      //   center: MyLatLng,    //地図の中心座標
+      //   mapTypeId: 'roadmap'   //地図の種類
+      // };
+      // let map = new google.maps.Map(document.getElementById('map'), Options);
 
       // 検索実行後、ヒットした居酒屋情報を配列に格納
       $.ajax({
@@ -256,8 +256,8 @@ function searchPlace(){
       .done(function(data) {
         console.log(data);
         // googlemapを表示
-        let map = document.getElementById("map");
-        map.style.display = 'block';
+        // let map = document.getElementById("map");
+        // map.style.display = 'block';
         //section-fourのpadding調整
         let sectionFour = document.getElementById("section-four");
         sectionFour.style.padding = '86px 102px 0';
