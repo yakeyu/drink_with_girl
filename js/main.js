@@ -222,7 +222,7 @@ function searchPlace(){
   let load = document.getElementById('overlay');
   load.style.display = 'block';
   // APIキー、urlを格納
-  let subscriptionKey = "";
+  let subscriptionKey = "d50399ac93d9a97a";
   let uriBase = 
   "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
 
@@ -236,7 +236,8 @@ function searchPlace(){
       // 現在地周辺の検索条件に合致する居酒屋のURLを格納
       let url = uriBase + "?key=" + subscriptionKey + 
       "&private_room=1" + "&cocktail=1" + "&range=5" + "&count=20" + 
-      "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp";
+      "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp"
+      ;
 
       // GoogleMapの実装・現在地の表示
       // let MyLatLng = new google.maps.LatLng(nowLatitude, nowLongitude);
