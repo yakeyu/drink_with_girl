@@ -224,7 +224,7 @@ function searchPlace(){
   // APIキー、urlを格納
   let subscriptionKey = "d50399ac93d9a97a";
   let uriBase = 
-  "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
+  "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/";
 
   // 現在位置の取得
   navigator.geolocation.getCurrentPosition(
