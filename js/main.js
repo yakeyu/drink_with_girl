@@ -261,9 +261,9 @@ function searchPlace(){
         // map.style.display = 'block';
         //section-fourのpadding調整
         let sectionFour = document.getElementById("section-four");
-        // sectionFour.style.padding = '86px 102px 0';
+        sectionFour.style.padding = '50px 0 0 0';
         let sectionFourHeader = document.getElementById("title");
-        // sectionFourHeader.style.padding = '0 0 63px 0';
+        sectionFourHeader.style.padding = '0 0 63px 0';
 
         //h4,h2タグの作成
         let h4 = document.createElement('h4');

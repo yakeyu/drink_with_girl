@@ -379,7 +379,7 @@ transform:scale(1.1);}
 
 /* Team */
 
-.team-pan figure{ padding:5px; border:5px solid #6bb551; overflow:hidden; background-color:#FFF;}
+.team-pan figure{ height: 300px; width: 300px; margin: 0 auto; padding:5px; border:5px solid #6bb551; overflow:hidden; background-color:#FFF;}
 
 .team-pan section:hover figure img{webkit-transform:scale(1.1);
 
