@@ -6,20 +6,13 @@ $(window).on("load", function() {
 $('body').fadeIn(1500);
 });
 
-
 // When the DOM is ready, run this function
-
 $(document).ready(function() {
 
-
-
   //#HEADER
-
 	var slideHeight = $(window).height();
 
 	$('#headere-top figure .item').css('height',slideHeight);
-
-
 
 	$(window).resize(function(){'use strict',
 
@@ -27,33 +20,22 @@ $(document).ready(function() {
 
 	});
 
-  
-
-  
-
-  
-
   //Scroll Menu
-
 	$(window).on('scroll', function(){
 
 		if( $(window).scrollTop()>90 ){
 
 			$('.header-top .header-fixed-wrapper').addClass('navbar-fixed-top animated fadeInDown');
 
-			
-
 		} else {
+
       $('.navbar-fixed-top animated fadeInDown').fadeOut(500);
+
 			$('.header-top .header-fixed-wrapper').removeClass('navbar-fixed-top animated fadeInDown');
 
 		}
 
 	});
-
-	
-
-	
 
 	 $(window).scroll(function(){                          
 
@@ -69,8 +51,6 @@ $(document).ready(function() {
 
         });
 
-	
-
 	// Navigation Scroll
 
 	$(window).scroll(function(event) {
@@ -78,8 +58,6 @@ $(document).ready(function() {
 		Scroll();
 
 	});
-
-
 
 	$('.navbar-collapse ul li a').on('click', function() {  
 
@@ -89,10 +67,7 @@ $(document).ready(function() {
 
 	});
 
-	
-
 	// User define function
-
 	function Scroll() {
 
 		var contentTop      =   [];
@@ -129,13 +104,11 @@ $(document).ready(function() {
 
 	};
 
-  
-
   // affix
 
   var width = $(window).width();
 
-  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-four').offset().top - $('.navbar').height() * 2;
+  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-one').offset().top - $('.navbar').height() * 2;
 
   $('.navbar').affix({
 
@@ -153,15 +126,9 @@ $(document).ready(function() {
 
   });
 
-  
-
   var owl = $("#owl-demo");
 
-
-
       owl.owlCarousel({
-
-        
 
         itemsCustom : [
 
@@ -185,36 +152,27 @@ $(document).ready(function() {
 
         navigation : true,
 
-		autoPlay : 3000,
-
-
+  		autoPlay : 3000,
 
       });
 
-	  
-
-	  
-
 	  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 
-          disableOn: 700,
+        disableOn: 700,
 
-          type: 'iframe',
+        type: 'iframe',
 
-          mainClass: 'mfp-fade',
+        mainClass: 'mfp-fade',
 
-          removalDelay: 160,
+        removalDelay: 160,
 
-          preloader: false,
+        preloader: false,
 
+        fixedContentPos: false
 
-
-          fixedContentPos: false
-
-        });
+      });
 });
 
-// ここからアレンジ
 // 居酒屋検索結果の取得
 function searchPlace(){
   // ローディング画面の表示
@@ -239,15 +197,6 @@ function searchPlace(){
       "&lat=" + nowLatitude + "&lng=" + nowLongitude + "&format=jsonp"
       ;
 
-      // GoogleMapの実装・現在地の表示
-      // let MyLatLng = new google.maps.LatLng(nowLatitude, nowLongitude);
-      // let Options = {
-      //   zoom: 15,      //地図の縮尺値
-      //   center: MyLatLng,    //地図の中心座標
-      //   mapTypeId: 'roadmap'   //地図の種類
-      // };
-      // let map = new google.maps.Map(document.getElementById('map'), Options);
-
       // 検索実行後、ヒットした居酒屋情報を配列に格納
       $.ajax({
         url: url,
@@ -255,12 +204,8 @@ function searchPlace(){
         dataType:'jsonp'
       })
       .done(function(data) {
-        console.log(data);
-        // googlemapを表示
-        // let map = document.getElementById("map");
-        // map.style.display = 'block';
-        //section-fourのpadding調整
-        let sectionFour = document.getElementById("section-four");
+        //section-oneのpadding調整
+        let sectionFour = document.getElementById("section-one");
         sectionFour.style.padding = '50px 0 0 0';
         let sectionFourHeader = document.getElementById("title");
         sectionFourHeader.style.padding = '0 0 63px 0';
@@ -318,7 +263,7 @@ function searchPlace(){
         }
 
         // 検索結果が表示されたら検索結果へスクロール
-        let position = $(".section-four").offset().top;
+        let position = $(".section-one").offset().top;
         $("html,body").animate({
           scrollTop: position
         });
