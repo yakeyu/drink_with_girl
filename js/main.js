@@ -135,7 +135,7 @@ $(document).ready(function() {
 
   var width = $(window).width();
 
-  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-four').offset().top - $('.navbar').height() * 2;
+  var top = $('.tp-banner-container').length == 0 ? -1 : $('.section-one').offset().top - $('.navbar').height() * 2;
 
   $('.navbar').affix({
 
@@ -259,8 +259,8 @@ function searchPlace(){
         // googlemapを表示
         // let map = document.getElementById("map");
         // map.style.display = 'block';
-        //section-fourのpadding調整
-        let sectionFour = document.getElementById("section-four");
+        //section-oneのpadding調整
+        let sectionFour = document.getElementById("section-one");
         sectionFour.style.padding = '50px 0 0 0';
         let sectionFourHeader = document.getElementById("title");
         sectionFourHeader.style.padding = '0 0 63px 0';
@@ -318,7 +318,7 @@ function searchPlace(){
         }
 
         // 検索結果が表示されたら検索結果へスクロール
-        let position = $(".section-four").offset().top;
+        let position = $(".section-one").offset().top;
         $("html,body").animate({
           scrollTop: position
         });

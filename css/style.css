@@ -1,26 +1,17 @@
 F/*
-	Theme Name: Rooky
-	Template URI: 
-	Description: 
-	Author:
-	Author URI: 
-	License: GNU General Public License version 3.0
-	License URI:
-	Version: 1.0
-	
+
 	1. Header
 		1. Nav
 	2. Top-pan
 	3. Title-Page
-	4. Section-One
 		1. Four-Box-Pan
 	5. Section Two
 		1. Video
 		2. Slider
 	6. Section Three
 		1. Pricing
-	7. Section Four
-		1.Team
+	7. Section One
+		1.store
 	8. Section Five
 		1. Subscribe Form
 	9. Section Six
@@ -197,7 +188,7 @@ header[role="header"].header-top hgroup nav ul>li>a:focus{color:#FFF;}
 
 
 
-header[role="header"].header-top hgroup.navbar-fixed-top,header[role="header"].header-top hgroup,header[role="header"].header-top hgroup h1,header[role="header"].header-top hgroup h1 img,header[role="header"].header-top hgroup nav ul,header[role="header"].header-top hgroup nav ul > li,.four-box-pan figure,.four-box-pan figure i,.four-box-pan section,.section-two section,.section-two section figure,.section-two section figure>img,.pricing>section input[type="button"],.pricing>section,.team-pan figure,.team-pan figure img,.subscribe-form button,.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea,.contact-form input[type="submit"]{transition-delay:0.8s;
+header[role="header"].header-top hgroup.navbar-fixed-top,header[role="header"].header-top hgroup,header[role="header"].header-top hgroup h1,header[role="header"].header-top hgroup h1 img,header[role="header"].header-top hgroup nav ul,header[role="header"].header-top hgroup nav ul > li,.four-box-pan figure,.four-box-pan figure i,.four-box-pan section,.section-two section,.section-two section figure,.section-two section figure>img,.pricing>section input[type="button"],.pricing>section,.store-pan figure,.store-pan figure img,.subscribe-form button,.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea,.contact-form input[type="submit"]{transition-delay:0.8s;
 
 transition-duration: 0.8s;transition-property: all;transition-timing-function: ease;}
 
@@ -252,14 +243,6 @@ header[role="title-page"] h4,header[role="title-page"] h4,header[role="title-pag
 header[role="title-page"] h4:after,header[role="title-page"] h4:after,header[role="title-page"] h4:after{ content:""; display:block; margin:0 auto; width:79px; height:2px; background-color:#6bb551; margin:17px auto; margin-bottom:0}
 
 header[role="title-page"] h2,header[role="title-page"] h2{ color:#000; font-size:31px; line-height:36px; font-weight:600; padding-top:2px}
-
-/*== Section One ==*/
-
-.section-one{ padding-top:87px}
-
-.section-one article{ padding-top:36px}
-
-.section-one article p{ font-size:15px; line-height:27px; color:#5e5e64; font-weight:500}
 
 /*== Four Box Pan ==*/
 
@@ -371,29 +354,29 @@ header[role="title-page"] h2,header[role="title-page"] h2{ color:#000; font-size
 
 transform:scale(1.1);}
 
-/*== Section Three ==*/
+/*== Section One ==*/
 
-.section-four{ padding-top:0px; padding-bottom:0px; background-color:#f7f7f8}
+.section-one{ padding-top:0px; padding-bottom:0px; background-color:#f7f7f8}
 
-.section-four header[role="title-page"]{ padding-bottom:0px}
+.section-one header[role="title-page"]{ padding-bottom:0px}
 
-/* Team */
+/* store */
 
-.team-pan figure{ height: 300px; width: 300px; margin: 0 auto; padding:5px; border:5px solid #6bb551; overflow:hidden; background-color:#FFF;}
+.store-pan figure{ height: 300px; width: 300px; margin: 0 auto; padding:5px; border:5px solid #6bb551; overflow:hidden; background-color:#FFF;}
 
-.team-pan section:hover figure img{webkit-transform:scale(1.1);
+.store-pan section:hover figure img{webkit-transform:scale(1.1);
 
 transform:scale(1.1); opacity:0.8}
 
-.team-pan header{ text-align:center; padding-top:10px; padding-bottom:20px;}
+.store-pan header{ text-align:center; padding-top:10px; padding-bottom:20px;}
 
-.team-pan header h5,.team-pan header h6{ font-size:15px; line-height:16px; padding:0; margin:0; color:#5e5e64; font-weight:400}
+.store-pan header h5,.store-pan header h6{ font-size:15px; line-height:16px; padding:0; margin:0; color:#5e5e64; font-weight:400}
 
-.team-pan header h5{ text-transform:uppercase; font-weight:700; color:#000; padding-bottom:8px; display:block}
+.store-pan header h5{ text-transform:uppercase; font-weight:700; color:#000; padding-bottom:8px; display:block}
 
-.team-pan header a{ display:inline-block; text-align:center; background-color:#cdcdce; color:#FFF; width:25px; height:25px; font-size:12px; line-height:25px; font-weight:normal; border-radius:100%;; margin:15px 3.5px; margin-bottom:0}
+.store-pan header a{ display:inline-block; text-align:center; background-color:#cdcdce; color:#FFF; width:25px; height:25px; font-size:12px; line-height:25px; font-weight:normal; border-radius:100%;; margin:15px 3.5px; margin-bottom:0}
 
-.team-pan header a:hover{ background-color:#6bb551}
+.store-pan header a:hover{ background-color:#6bb551}
 
 /*== Section Five ==*/
 

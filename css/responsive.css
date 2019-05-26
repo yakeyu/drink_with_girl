@@ -16,13 +16,13 @@
 
 	.pricing > section{ margin:0; width:32%; max-width:32%}
 
-	.team-pan section { margin-bottom:30px}
+	.store-pan section { margin-bottom:30px}
 
-	.team-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
+	.store-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
 
 	.contact-form{ padding-left:20px; padding-right:20px}
 
-	.section-one article p br,.slider-pan section article br,.section-five header[role="title-page"] h4 br, .section-five header[role="title-page"] h2 br{ display:none}
+	.slider-pan section article br,.section-five header[role="title-page"] h4 br, .section-five header[role="title-page"] h2 br{ display:none}
 
 }
 
@@ -68,9 +68,9 @@
 
 	.section-three header[role="title-page"]{ padding-bottom:20px}
 
-	.team-pan section { margin-bottom:30px}
+	.store-pan section { margin-bottom:30px}
 
-	.team-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
+	.store-pan figure img{ margin:0 auto; width:100%; max-width:100%; display:block}
 
 	.contact-form{ padding-left:0; padding-right:0}
 
@@ -98,6 +98,6 @@
 
 	.subscribe-form button i{ padding-right:0}
 
-	.team-pan figure { height: 250px; width: 250px; margin: 0 auto;}
+	.store-pan figure { height: 250px; width: 250px; margin: 0 auto;}
 
 }
